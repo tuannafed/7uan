@@ -1,0 +1,11 @@
+import { describe, test, expect } from 'vitest'
+import { {{camelCase name}} } from './{{camelCase name}}'
+
+describe('{{camelCase name}}()', () => {
+  test('should convert keys to snake_case in an object', () => {
+    const input = [{ snake_case_key: 'value' }]
+    const { result } = renderHook(() => {{camelCase name}}(input))
+
+    expect(result.current.output).toBe('Processed output')  // Replace with your expected output
+  })
+})

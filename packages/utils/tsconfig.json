@@ -1,0 +1,10 @@
+{
+  "extends": "@repo/typescript-config/base.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "lib": ["ESNEXT", "DOM", "DOM.Iterable"],
+    "types": ["vitest/globals"],
+    "module": "ESNext",
+    "moduleResolution": "Bundler"
+  }
+}

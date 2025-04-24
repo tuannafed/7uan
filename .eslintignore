@@ -1,0 +1,27 @@
+# Ignore node_modules
+node_modules/
+
+# Ignore build directories
+dist/
+build/
+
+# Ignore next.js build output
+.next/
+
+# Ignore Vercel build output
+.output/
+
+# Ignore Git configuration
+.git/
+
+# Ignore GitHub workflows
+.github/
+
+# Ignore scripts folder
+scripts/
+
+# Ignore turbo cache
+.turbo/
+
+# Ignore changeset files
+.changeset/

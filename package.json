@@ -1,0 +1,99 @@
+{
+  "name": "workspace",
+  "private": false,
+  "version": "1.0.0",
+  "description": "React hook library, ready to use, written in Typescript.",
+  "author": "TuanNA <tuanna.fed@gmail.com>",
+  "homepage": "https://github.com/tuannafed/7uan",
+  "module": "true",
+  "type": "module",
+  "keywords": [
+    "typescript",
+    "react",
+    "hooks",
+    "utils",
+    "helpers",
+    "library"
+  ],
+  "license": "ISC",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "preinstall": "npx only-allow pnpm",
+    "dev": "turbo run dev",
+    "build": "turbo run build",
+    "test": "turbo run test",
+    "precommit": "lint-staged",
+    "prepare": "husky",
+    "clean": "rm -rf .turbo generated node_modules packages/*/node_modules",
+    "format": "prettier --write \"**/*.{json,md,mdx,css,scss,yaml,yml,ts,tsx,js,jsx,mjs,cjs}\" --ignore-path .prettierignore",
+    "lint": "turbo run lint",
+    "lint:fix": "turbo run lint:fix",
+    "lint:fix:all": "turbo run lint:fix",
+    "update-testing-issue": "zx ./scripts/update-testing-issue.js",
+    "update-algolia-index": "zx ./scripts/update-algolia-index.js",
+    "gen-hook": "turbo gen hook --config \"turbo/generators/config.cts\"",
+    "gen-util": "turbo gen util --config \"turbo/generators/config.cts\"",
+    "prepublish": "pnpm run build && pnpm run format && pnpm run lint",
+    "changeset": "npx changeset",
+    "changeset-version": "npx changeset version",
+    "changeset-publish": "npx changeset publish",
+    "publish-react-hooks": "cd packages/react-hooks && pnpm publish",
+    "publish-utils": "cd packages/utils && pnpm publish",
+    "publish-cli": "cd packages/cli && pnpm publish",
+    "generate-doc": "zx ./scripts/generate-doc.js"
+  },
+  "resolutions": {
+    "typescript": "^5.3.3"
+  },
+  "pnpm": {
+    "overrides": {
+      "glob": "^8.1.0",
+      "inflight": "^1.0.6"
+    },
+    "onlyBuiltDependencies": [
+      "core-js-pure",
+      "esbuild",
+      "sharp"
+    ]
+  },
+  "devDependencies": {
+    "@changesets/cli": "^2.27.11",
+    "@commitlint/cli": "^19.8.0",
+    "@commitlint/config-conventional": "^19.8.0",
+    "@turbo/gen": "^2.5.1",
+    "date-fns": "^4.1.0",
+    "dotenv": "^16.4.7",
+    "eslint": "^9.17.0",
+    "globals": "^15.14.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^15.5.1",
+    "prettier": "^3.4.2",
+    "turbo": "^2.5.1",
+    "typedoc": "^0.27.6",
+    "typedoc-plugin-markdown": "^4.4.1",
+    "typedoc-plugin-mdn-links": "^4.0.7",
+    "typedoc-plugin-missing-exports": "^3.1.0",
+    "zx": "^8.3.0"
+  },
+  "packageManager": "pnpm@10.9.0",
+  "engines": {
+    "node": ">=18.17.0"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx,css}": [
+      "prettier --write",
+      "eslint --fix --config=packages/eslint-config/eslint.base.config.mjs"
+    ],
+    "*.{json,md}": [
+      "prettier --write"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tuannafed/7uan"
+  },
+  "bugs": {
+    "url": "https://github.com/tuannafed/7uan/issues"
+  }
+}

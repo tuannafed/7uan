@@ -1,0 +1,81 @@
+{
+  "name": "@7uan/react-hooks",
+  "version": "1.0.0",
+  "description": "React hook library, ready to use, written in Typescript.",
+  "private": false,
+  "author": "TuanNA <tuanna.fed@gmail.com>",
+  "homepage": "",
+  "keywords": [
+    "typescript",
+    "react",
+    "hooks"
+  ],
+  "license": "MIT",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    "./package.json": "./package.json",
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      }
+    }
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "sideEffects": false,
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "clean": "rimraf dist .turbo *.tsbuildinfo",
+    "format": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc",
+    "lint": "eslint . --fix && tsc --noEmit",
+    "lint:fix": "eslint . --fix && tsc --noEmit"
+  },
+  "devDependencies": {
+    "@juggle/resize-observer": "^3.4.0",
+    "@repo/eslint-config": "workspace:^",
+    "@repo/typescript-config": "workspace:^",
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^16.1.0",
+    "@types/lodash.debounce": "^4.0.9",
+    "@types/react": "^19.0.3",
+    "eslint-plugin-jsdoc": "^50.6.1",
+    "eslint-plugin-tree-shaking": "^1.12.2",
+    "jsdom": "^25.0.1",
+    "lodash.debounce": "^4.0.8",
+    "react": "19.0.0",
+    "tsup": "^8.3.5",
+    "typescript": "^5.7.2",
+    "vitest": "^2.1.8"
+  },
+  "peerDependencies": {
+    "react": "^16.8.0  || ^17 || ^18 || ^19"
+  },
+  "engines": {
+    "node": ">=18.18.0"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tuannafed/tna-npm"
+  },
+  "bugs": {
+    "url": "https://github.com/tuannafed/tna-npm/issues"
+  },
+  "directories": {
+    "test": "tests"
+  }
+}

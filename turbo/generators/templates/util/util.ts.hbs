@@ -1,0 +1,23 @@
+
+/** Utility return type */
+type {{pascalCase name}}ReturnType = {
+  output: string
+}
+
+/**
+ * Utility function that processes an object or array of objects and returns a transformed result as a string.
+ * @param {T} data The object or array of objects to process. It can be any object or array of objects.
+ * @returns {{pascalCase name}}ReturnType The transformed result, which is a string.
+ * @see [Documentation](https://domain.com/utility/{{kebabCase name}})
+ * @public
+ * @example
+ * ```tsx
+ * const result = {{camelCase name}}([{ snake_case_key: 'value' }]);
+ *
+ * console.log(result); // "Processed output"
+ * ```
+ */
+export function {{camelCase name}}<T>(data: T): {{pascalCase name}}ReturnType {
+  const output = JSON.stringify(data); // Example transformation
+  return { output };
+}
