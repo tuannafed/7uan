@@ -1,6 +1,6 @@
 {
   "name": "@7uan/utils",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "private": false,
   "sideEffects": false,
   "description": "This is the repository to make some utils functions, re-libraries, helpers, constants, types, etc...",
