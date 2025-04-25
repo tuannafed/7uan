@@ -7,7 +7,7 @@ public
 pnpm-lock.yaml
 .changeset
 .github
-apps/www/.next
+apps/*/.next
 
 **/*/node_modules
 **/*/dist
