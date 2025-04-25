@@ -6,3 +6,5 @@ export * from './formatQueryString'
 export * from './httpCode'
 export * from './removeEmptyQueryParams'
 export * from './sleep'
+
+export * from './getFileInfo'

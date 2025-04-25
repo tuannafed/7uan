@@ -30,7 +30,8 @@
     "lint": "eslint . --fix && tsc --noEmit",
     "lint:fix": "eslint . --fix && tsc --noEmit",
     "format": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc",
-    "clean": "rimraf dist node_modules"
+    "clean": "rimraf dist node_modules",
+    "generate-docs": "npx tsx scripts/generate.ts"
   },
   "dependencies": {
     "dayjs": "^1.11.13"
